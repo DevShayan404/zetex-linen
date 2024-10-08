@@ -1,0 +1,18 @@
+<nav>
+  <div class="container">
+    <div class="row align-items-center py-3">
+      <div class="col">
+        <h3>LOGO</h3>
+      </div>
+      <div class="col">
+        <ul class="d-flex align-items-center float-end">
+          @for (item of navLinks; track $index) {
+          <li>
+            <a>{{ item }}</a>
+          </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
