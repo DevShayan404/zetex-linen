@@ -39,3 +39,28 @@
 .about-section hr {
   margin: 30px 0;
 }
+/* ----------------------other service section------------------------- */
+.product-section .card {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background: transparent;
+  cursor: pointer;
+}
+.product-section .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for zoom and brightness */
+}
+
+.product-section .card:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
+  filter: brightness(0.8); /* Darken the image */
+}
