@@ -13,19 +13,20 @@
   transform: rotate(-90deg);
   color: rgb(0 0 0 / 18%);
   position: absolute;
-  bottom: 200px;
-  left: -173px;
+  bottom: 190px;
+  left: -165px;
 }
 .banner-content h1 {
-  font-size: 130px;
+  font-size: 110px;
   font-weight: 800;
   letter-spacing: 20px;
   font-family: var(--font-secondary);
   line-height: 1;
 }
 .banner-content h2 {
-  font-size: 48px;
-  font-weight: 700;
+  padding: 5px 5px 0 0;
+  font-size: 36px;
+  font-weight: 800;
   letter-spacing: 14px;
   color: rgb(0 0 0 / 18%);
   text-align: end;
