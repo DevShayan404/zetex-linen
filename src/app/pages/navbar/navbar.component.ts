@@ -1,16 +1,16 @@
 import { Location } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  navLinks: string[] = ['Home', 'About Us', 'Products', 'Contact Us'];
+  navLinks: string[] = ['Home', 'About Us', 'Products', 'Contact'];
   activeLink: number = 0;
 
   constructor(private router: Router, private location: Location) {}
@@ -34,8 +34,8 @@ export class NavbarComponent {
         this.router.navigate(['products']);
         this.activeLink = i;
         break;
-      case 'Contact Us':
-        this.router.navigate(['contact-us']);
+      case 'Contact':
+        this.router.navigate(['contact']);
         this.activeLink = i;
         break;
 
@@ -55,7 +55,7 @@ export class NavbarComponent {
       case '/products':
         this.activeLink = 2;
         break;
-      case '/contact-us':
+      case '/contact':
         this.activeLink = 3;
         break;
       default:

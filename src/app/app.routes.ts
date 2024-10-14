@@ -14,7 +14,7 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'contact-us',
+    path: 'contact',
     loadComponent: () =>
       import('./pages/contact-us/contact-us.component').then(
         (c) => c.ContactUsComponent
