@@ -1,0 +1,8 @@
+footer ul li:hover {
+  color: #8ea9aa;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+footer i {
+  color: #8ea9aa;
+}
