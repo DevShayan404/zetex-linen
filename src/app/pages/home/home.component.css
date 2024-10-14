@@ -86,14 +86,4 @@
   object-fit: cover;
 }
 /* ----------------------------------------- */
-.contact-section button {
-  background: rgb(0 0 0 / 50%);
-  color: #fff;
-  padding: 8px 14px;
-  border: 0;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.contact-section button:hover {
-  background: rgb(0 0 0 / 70%);
-}
+
