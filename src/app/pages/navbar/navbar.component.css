@@ -4,6 +4,6 @@
   cursor: pointer;
 }
 .active {
-  background: rgb(0 0 0 / 70%);
+  background: #3b4a4f;
   color: #fff;
 }
