@@ -86,7 +86,8 @@
   width: 100%;
   transform: rotate(-36deg);
   padding: 10px 75px;
-  background: #5b7e80;
+  /* background: rgb(91 126 128 / 75%); */
+  background: #3b4a4f;
   color: #fff;
 }
 .first {
@@ -130,3 +131,13 @@
   object-fit: cover;
 }
 /* ----------------------------------------- */
+.feedback-section .card .card-body {
+  position: relative;
+}
+.feedback-section .card .card-body .bi-quote {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  color: #8ea9aa;
+  font-size: 52px;
+}

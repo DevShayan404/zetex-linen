@@ -1,0 +1,68 @@
+.product-section .card {
+  height: 280px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  /* padding: 20px; */
+  background: transparent;
+  cursor: pointer;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ripple-effect::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 300%;
+  height: 300%;
+  background: rgb(0 0 0 / 25%);
+  border-radius: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.6s, opacity 0.6s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ripple-effect:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.product-section .card img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  /* transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;  */
+}
+.typography {
+  width: 100%;
+  transform: rotate(-36deg);
+  padding: 10px 75px;
+  /* background: rgb(91 126 128 / 75%); */
+  background: #3b4a4f;
+  color: #fff;
+}
+.first {
+  position: absolute;
+  top: -32%;
+  left: -14%;
+}
+.second {
+  position: absolute;
+  top: -32%;
+  left: -13%;
+}
+.third {
+  position: absolute;
+  top: 3%;
+  left: -14%;
+}
+
+/* .product-section .card:hover img {
+    transform: scale(1.1); 
+    filter: brightness(0.8); 
+  } */
