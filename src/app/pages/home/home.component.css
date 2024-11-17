@@ -16,6 +16,7 @@
   bottom: 190px;
   left: -165px;
 }
+
 .banner-content h1 {
   font-size: 110px;
   font-weight: 800;
@@ -30,6 +31,22 @@
   letter-spacing: 14px;
   color: rgb(0 0 0 / 18%);
   text-align: end;
+}
+@media (max-width: 575px) {
+  .banner-section {
+    height: 70vh;
+    border-radius: 0px;
+  }
+  .banner-content {
+    bottom: 130px;
+    left: -106px;
+  }
+  .banner-content h1 {
+    font-size: 60px;
+  }
+  .banner-content h2 {
+    font-size: 30px;
+  }
 }
 /* ----------------------------------------- */
 .about-section img {

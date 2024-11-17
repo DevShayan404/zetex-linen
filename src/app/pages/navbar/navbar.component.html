@@ -12,18 +12,69 @@
         />
       </div>
       <div class="col">
-        <ul class="d-flex align-items-center float-end">
-          @for (item of navLinks; track item; let i = $index) {
-          <li
-            class="nav-links rounded"
-            [class.active]="i === activeLink"
-            (click)="setActiveLink(i, item)"
-          >
-            <a>{{ item }}</a>
-          </li>
-          }
-        </ul>
+        <div class="d-none d-sm-none d-lg-block float-end">
+          <ul class="d-flex align-items-center">
+            @for (item of navLinks; track item; let i = $index) {
+            <li
+              class="nav-links rounded"
+              [class.active]="i === activeLink"
+              (click)="setActiveLink(i, item)"
+            >
+              <a>{{ item }}</a>
+            </li>
+            }
+          </ul>
+        </div>
+        <div class="d-block d-sm-block d-lg-none float-end">
+          <i
+            class="bi bi-list fs-1 me-2"
+            style="cursor: pointer"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"
+          ></i>
+        </div>
       </div>
     </div>
   </div>
 </nav>
+
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasRight"
+  aria-labelledby="offcanvasRightLabel"
+>
+  <div class="offcanvas-header">
+    <img
+      id="offcanvasRightLabel"
+      width="150"
+      src="assets\images\logo.png"
+      alt=""
+      class="img-fluid"
+      style="cursor: pointer offcanvas-title"
+      routerLink=""
+    />
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="d-flex align-items-center flex-column w-100">
+      @for (item of navLinks; track item; let i = $index) {
+      <li
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+        class="nav-links rounded w-100 my-2"
+        [class.active]="i === activeLink"
+        (click)="setActiveLink(i, item)"
+      >
+        <a>{{ item }}</a>
+      </li>
+      }
+    </ul>
+  </div>
+</div>
